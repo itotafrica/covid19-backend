@@ -50,6 +50,11 @@ class Cases
     private ?DateTimeInterface $updatedAt = null;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $region;
+
+    /**
      * @return int|null
      * @author bernard-ng <ngandubernard@gmail.com>
      */
@@ -138,6 +143,18 @@ class Cases
     public function setUpdatedAt(DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->region;
+    }
+
+    public function setRegion(string $region): self
+    {
+        $this->region = $region;
 
         return $this;
     }
