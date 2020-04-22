@@ -50,10 +50,10 @@ class Cases
     private ?DateTimeInterface $updatedAt = null;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=255)
      */
-    private $region;
-
+    private ?string $region=null;
+    
     /**
      * @return int|null
      * @author bernard-ng <ngandubernard@gmail.com>
@@ -158,4 +158,5 @@ class Cases
 
         return $this;
     }
+
 }
